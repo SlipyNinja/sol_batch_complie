@@ -1,0 +1,31 @@
+Traceback (most recent call last):
+  File "d:\pytest\test2.py", line 88, in process_directory
+    compiled_sol = compile_contract(path, version, filename)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\pytest\test2.py", line 73, in compile_contract
+    compiled_sol = compile_standard(setting, solc_version=version)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\solcx\main.py", line 369, in compile_standard
+    raise SolcError(
+solcx.exceptions.SolcError: 06_10_Lon.sol:4:1: ParserError: Source "03_10_ERC20.sol" not found: File outside of allowed directories.
+import "./03_10_ERC20.sol";
+^-------------------------^
+
+06_10_Lon.sol:5:1: ParserError: Source "02_10_SafeMath.sol" not found: File outside of allowed directories.
+import "./02_10_SafeMath.sol";
+^----------------------------^
+
+06_10_Lon.sol:7:1: ParserError: Source "10_10_ILon.sol" not found: File outside of allowed directories.
+import "./10_10_ILon.sol";
+^------------------------^
+
+06_10_Lon.sol:8:1: ParserError: Source "07_10_Ownable.sol" not found: File outside of allowed directories.
+import "./07_10_Ownable.sol";
+^---------------------------^
+
+> command: `C:\Users\54573\.solcx\solc-v0.7.4\solc.exe --standard-json`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"6275","formattedMessage":"06_10_Lon.sol:4:1: ParserError: Source \"03_10_ERC20.sol\" not found: File outside of allowed directories.\nimport \"./03_10_ERC20.sol\";\n^-------------------------^\n","message":"Source \"03_10_ERC20.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":92,"file":"06_10_Lon.sol","start":65},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"06_10_Lon.sol:5:1: ParserError: Source \"02_10_SafeMath.sol\" not found: File outside of allowed directories.\nimport \"./02_10_SafeMath.sol\";\n^----------------------------^\n","message":"Source \"02_10_SafeMath.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":123,"file":"06_10_Lon.sol","start":93},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"06_10_Lon.sol:7:1: ParserError: Source \"10_10_ILon.sol\" not found: File outside of allowed directories.\nimport \"./10_10_ILon.sol\";\n^------------------------^\n","message":"Source \"10_10_ILon.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":151,"file":"06_10_Lon.sol","start":125},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"06_10_Lon.sol:8:1: ParserError: Source \"07_10_Ownable.sol\" not found: File outside of allowed directories.\nimport \"./07_10_Ownable.sol\";\n^---------------------------^\n","message":"Source \"07_10_Ownable.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":181,"file":"06_10_Lon.sol","start":152},"type":"ParserError"}],"sources":{}}
+
+> stderr:

@@ -1,0 +1,50 @@
+Traceback (most recent call last):
+  File "d:\pytest\test2.py", line 88, in process_directory
+    compiled_sol = compile_contract(path, version, filename)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\pytest\test2.py", line 73, in compile_contract
+    compiled_sol = compile_standard(setting, solc_version=version)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\solcx\main.py", line 369, in compile_standard
+    raise SolcError(
+solcx.exceptions.SolcError: ParserError: Source "02_13_Ownable.sol" not found: File outside of allowed directories.
+ --> 01_13_ParticipationTrophy.sol:4:1:
+  |
+4 | import { Ownable } from "./02_13_Ownable.sol";
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+ParserError: Source "03_13_ReentrancyGuard.sol" not found: File outside of allowed directories.
+ --> 01_13_ParticipationTrophy.sol:5:1:
+  |
+5 | import { ReentrancyGuard } from "./03_13_ReentrancyGuard.sol";
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+ParserError: Source "04_13_ERC1155.sol" not found: File outside of allowed directories.
+ --> 01_13_ParticipationTrophy.sol:6:1:
+  |
+6 | import { ERC1155 } from "./04_13_ERC1155.sol";
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+ParserError: Source "05_13_ERC1155Burnable.sol" not found: File outside of allowed directories.
+ --> 01_13_ParticipationTrophy.sol:7:1:
+  |
+7 | import { ERC1155Burnable } from "./05_13_ERC1155Burnable.sol";
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+ParserError: Source "06_13_MerkleProof.sol" not found: File outside of allowed directories.
+ --> 01_13_ParticipationTrophy.sol:8:1:
+  |
+8 | import { MerkleProof } from "./06_13_MerkleProof.sol";
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+> command: `C:\Users\54573\.solcx\solc-v0.8.4\solc.exe --standard-json`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"6275","formattedMessage":"ParserError: Source \"02_13_Ownable.sol\" not found: File outside of allowed directories.\n --> 01_13_ParticipationTrophy.sol:4:1:\n  |\n4 | import { Ownable } from \"./02_13_Ownable.sol\";\n  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n","message":"Source \"02_13_Ownable.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":118,"file":"01_13_ParticipationTrophy.sol","start":72},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"ParserError: Source \"03_13_ReentrancyGuard.sol\" not found: File outside of allowed directories.\n --> 01_13_ParticipationTrophy.sol:5:1:\n  |\n5 | import { ReentrancyGuard } from \"./03_13_ReentrancyGuard.sol\";\n  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n","message":"Source \"03_13_ReentrancyGuard.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":181,"file":"01_13_ParticipationTrophy.sol","start":119},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"ParserError: Source \"04_13_ERC1155.sol\" not found: File outside of allowed directories.\n --> 01_13_ParticipationTrophy.sol:6:1:\n  |\n6 | import { ERC1155 } from \"./04_13_ERC1155.sol\";\n  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n","message":"Source \"04_13_ERC1155.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":228,"file":"01_13_ParticipationTrophy.sol","start":182},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"ParserError: Source \"05_13_ERC1155Burnable.sol\" not found: File outside of allowed directories.\n --> 01_13_ParticipationTrophy.sol:7:1:\n  |\n7 | import { ERC1155Burnable } from \"./05_13_ERC1155Burnable.sol\";\n  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n","message":"Source \"05_13_ERC1155Burnable.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":291,"file":"01_13_ParticipationTrophy.sol","start":229},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"ParserError: Source \"06_13_MerkleProof.sol\" not found: File outside of allowed directories.\n --> 01_13_ParticipationTrophy.sol:8:1:\n  |\n8 | import { MerkleProof } from \"./06_13_MerkleProof.sol\";\n  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\n","message":"Source \"06_13_MerkleProof.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":346,"file":"01_13_ParticipationTrophy.sol","start":292},"type":"ParserError"}],"sources":{}}
+
+> stderr:

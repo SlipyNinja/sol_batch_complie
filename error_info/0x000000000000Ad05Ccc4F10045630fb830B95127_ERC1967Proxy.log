@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "d:\pytest\test2.py", line 88, in process_directory
+    compiled_sol = compile_contract(path, version, filename)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\pytest\test2.py", line 67, in compile_contract
+    with open(os.path.join(path, filename), "r", encoding='utf-8') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:/pytest/contracts\\0x000000000000Ad05Ccc4F10045630fb830B95127_ERC1967Proxy\\ERC1967Proxy.sol'

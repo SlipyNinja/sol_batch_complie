@@ -1,0 +1,71 @@
+Traceback (most recent call last):
+  File "d:\pytest\test2.py", line 88, in process_directory
+    compiled_sol = compile_contract(path, version, filename)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "d:\pytest\test2.py", line 73, in compile_contract
+    compiled_sol = compile_standard(setting, solc_version=version)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python312\Lib\site-packages\solcx\main.py", line 369, in compile_standard
+    raise SolcError(
+solcx.exceptions.SolcError: 01_20_FlashDepotAave.sol:6:1: ParserError: Source "04_20_IBeanstalk.sol" not found: File outside of allowed directories.
+import {IBeanstalk, To, From} from "./04_20_IBeanstalk.sol";
+^----------------------------------------------------------^
+
+01_20_FlashDepotAave.sol:7:1: ParserError: Source "02_20_DepotFacet.sol" not found: File outside of allowed directories.
+import {DepotFacet} from "./02_20_DepotFacet.sol";
+^------------------------------------------------^
+
+01_20_FlashDepotAave.sol:8:1: ParserError: Source "03_20_TokenSupportFacet.sol" not found: File outside of allowed directories.
+import {TokenSupportFacet} from "./03_20_TokenSupportFacet.sol";
+^--------------------------------------------------------------^
+
+01_20_FlashDepotAave.sol:9:1: ParserError: Source "12_20_LibFunction.sol" not found: File outside of allowed directories.
+import {LibFunction} from "./12_20_LibFunction.sol";
+^--------------------------------------------------^
+
+01_20_FlashDepotAave.sol:10:1: ParserError: Source "11_20_LibFlashLoan.sol" not found: File outside of allowed directories.
+import {LibFlashLoan} from "./11_20_LibFlashLoan.sol";
+^----------------------------------------------------^
+
+01_20_FlashDepotAave.sol:11:1: ParserError: Source "18_20_SafeERC20.sol" not found: File outside of allowed directories.
+import {SafeERC20} from "./18_20_SafeERC20.sol";
+^----------------------------------------------^
+
+01_20_FlashDepotAave.sol:12:1: ParserError: Source "13_20_IERC20Permit.sol" not found: File outside of allowed directories.
+import {IERC20Permit} from "./13_20_IERC20Permit.sol";
+^----------------------------------------------------^
+
+01_20_FlashDepotAave.sol:13:1: ParserError: Source "16_20_IERC1155.sol" not found: File outside of allowed directories.
+import {IERC1155} from "./16_20_IERC1155.sol";
+^--------------------------------------------^
+
+01_20_FlashDepotAave.sol:14:1: ParserError: Source "05_20_IERC4494.sol" not found: File outside of allowed directories.
+import {IERC4494} from "./05_20_IERC4494.sol";
+^--------------------------------------------^
+
+01_20_FlashDepotAave.sol:15:1: ParserError: Source "19_20_IERC721.sol" not found: File outside of allowed directories.
+import {IERC721} from "./19_20_IERC721.sol";
+^------------------------------------------^
+
+01_20_FlashDepotAave.sol:16:1: ParserError: Source "17_20_IERC20.sol" not found: File outside of allowed directories.
+import {IERC20} from "./17_20_IERC20.sol";
+^----------------------------------------^
+
+01_20_FlashDepotAave.sol:17:1: ParserError: Source "06_20_IFlashLoanReceiver.sol" not found: File outside of allowed directories.
+import {IFlashLoanReceiver} from "./06_20_IFlashLoanReceiver.sol";
+^----------------------------------------------------------------^
+
+01_20_FlashDepotAave.sol:18:1: ParserError: Source "10_20_IPoolAddressesProvider.sol" not found: File outside of allowed directories.
+import {IPoolAddressesProvider} from "./10_20_IPoolAddressesProvider.sol";
+^------------------------------------------------------------------------^
+
+01_20_FlashDepotAave.sol:19:1: ParserError: Source "09_20_IPool.sol" not found: File outside of allowed directories.
+import {IPool} from "./09_20_IPool.sol";
+^--------------------------------------^
+
+> command: `C:\Users\54573\.solcx\solc-v0.7.6\solc.exe --standard-json`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"6275","formattedMessage":"01_20_FlashDepotAave.sol:6:1: ParserError: Source \"04_20_IBeanstalk.sol\" not found: File outside of allowed directories.\nimport {IBeanstalk, To, From} from \"./04_20_IBeanstalk.sol\";\n^----------------------------------------------------------^\n","message":"Source \"04_20_IBeanstalk.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":152,"file":"01_20_FlashDepotAave.sol","start":92},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"01_20_FlashDepotAave.sol:7:1: ParserError: Source \"02_20_DepotFacet.sol\" not found: File outside of allowed directories.\nimport {DepotFacet} from \"./02_20_DepotFacet.sol\";\n^------------------------------------------------^\n","message":"Source \"02_20_DepotFacet.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":203,"file":"01_20_FlashDepotAave.sol","start":153},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"01_20_FlashDepotAave.sol:8:1: ParserError: Source \"03_20_TokenSupportFacet.sol\" not found: File outside of allowed directories.\nimport {TokenSupportFacet} from \"./03_20_TokenSupportFacet.sol\";\n^--------------------------------------------------------------^\n","message":"Source \"03_20_TokenSupportFacet.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":268,"file":"01_20_FlashDepotAave.sol","start":204},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"01_20_FlashDepotAave.sol:9:1: ParserError: Source \"12_20_LibFunction.sol\" not found: File outside of allowed directories.\nimport {LibFunction} from \"./12_20_LibFunction.sol\";\n^--------------------------------------------------^\n","message":"Source \"12_20_LibFunction.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":321,"file":"01_20_FlashDepotAave.sol","start":269},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"01_20_FlashDepotAave.sol:10:1: ParserError: Source \"11_20_LibFlashLoan.sol\" not found: File outside of allowed directories.\nimport {LibFlashLoan} from \"./11_20_LibFlashLoan.sol\";\n^----------------------------------------------------^\n","message":"Source \"11_20_LibFlashLoan.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":376,"file":"01_20_FlashDepotAave.sol","start":322},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"01_20_FlashDepotAave.sol:11:1: ParserError: Source \"18_20_SafeERC20.sol\" not found: File outside of allowed directories.\nimport {SafeERC20} from \"./18_20_SafeERC20.sol\";\n^----------------------------------------------^\n","message":"Source \"18_20_SafeERC20.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":425,"file":"01_20_FlashDepotAave.sol","start":377},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"01_20_FlashDepotAave.sol:12:1: ParserError: Source \"13_20_IERC20Permit.sol\" not found: File outside of allowed directories.\nimport {IERC20Permit} from \"./13_20_IERC20Permit.sol\";\n^----------------------------------------------------^\n","message":"Source \"13_20_IERC20Permit.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":480,"file":"01_20_FlashDepotAave.sol","start":426},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"01_20_FlashDepotAave.sol:13:1: ParserError: Source \"16_20_IERC1155.sol\" not found: File outside of allowed directories.\nimport {IERC1155} from \"./16_20_IERC1155.sol\";\n^--------------------------------------------^\n","message":"Source \"16_20_IERC1155.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":527,"file":"01_20_FlashDepotAave.sol","start":481},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"01_20_FlashDepotAave.sol:14:1: ParserError: Source \"05_20_IERC4494.sol\" not found: File outside of allowed directories.\nimport {IERC4494} from \"./05_20_IERC4494.sol\";\n^--------------------------------------------^\n","message":"Source \"05_20_IERC4494.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":574,"file":"01_20_FlashDepotAave.sol","start":528},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"01_20_FlashDepotAave.sol:15:1: ParserError: Source \"19_20_IERC721.sol\" not found: File outside of allowed directories.\nimport {IERC721} from \"./19_20_IERC721.sol\";\n^------------------------------------------^\n","message":"Source \"19_20_IERC721.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":619,"file":"01_20_FlashDepotAave.sol","start":575},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"01_20_FlashDepotAave.sol:16:1: ParserError: Source \"17_20_IERC20.sol\" not found: File outside of allowed directories.\nimport {IERC20} from \"./17_20_IERC20.sol\";\n^----------------------------------------^\n","message":"Source \"17_20_IERC20.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":662,"file":"01_20_FlashDepotAave.sol","start":620},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"01_20_FlashDepotAave.sol:17:1: ParserError: Source \"06_20_IFlashLoanReceiver.sol\" not found: File outside of allowed directories.\nimport {IFlashLoanReceiver} from \"./06_20_IFlashLoanReceiver.sol\";\n^----------------------------------------------------------------^\n","message":"Source \"06_20_IFlashLoanReceiver.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":729,"file":"01_20_FlashDepotAave.sol","start":663},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"01_20_FlashDepotAave.sol:18:1: ParserError: Source \"10_20_IPoolAddressesProvider.sol\" not found: File outside of allowed directories.\nimport {IPoolAddressesProvider} from \"./10_20_IPoolAddressesProvider.sol\";\n^------------------------------------------------------------------------^\n","message":"Source \"10_20_IPoolAddressesProvider.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":804,"file":"01_20_FlashDepotAave.sol","start":730},"type":"ParserError"},{"component":"general","errorCode":"6275","formattedMessage":"01_20_FlashDepotAave.sol:19:1: ParserError: Source \"09_20_IPool.sol\" not found: File outside of allowed directories.\nimport {IPool} from \"./09_20_IPool.sol\";\n^--------------------------------------^\n","message":"Source \"09_20_IPool.sol\" not found: File outside of allowed directories.","severity":"error","sourceLocation":{"end":845,"file":"01_20_FlashDepotAave.sol","start":805},"type":"ParserError"}],"sources":{}}
+
+> stderr:

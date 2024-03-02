@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "d:\pytest\test2.py", line 83, in process_directory
+    raise FileNotFoundError("Error: No contracts found.")
+FileNotFoundError: Error: No contracts found.
