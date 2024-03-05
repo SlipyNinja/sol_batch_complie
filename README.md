@@ -9,6 +9,5 @@
 4. 更改batchCompile.py中数据及输出目录的绝对路径，运行batchCompile.py进行批量编译
 
 生成的编译文件放在compile_info目录下，若编译失败，异常信息保存在error_info目录下。
-目前大多数失败是由于文件夹中不包含.sol文件导致的。
 
 
