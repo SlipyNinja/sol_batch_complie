@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "/Users/longfeichen/研究生/Web3MLM/testing/sol_batch_compile-main/batchCompile.py", line 161, in multi_process_directory
+    compiled_sol = compile_contract(path, version, filename, copy.deepcopy(settings))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/longfeichen/研究生/Web3MLM/testing/sol_batch_compile-main/batchCompile.py", line 115, in compile_contract
+    compiled_sol = compile_standard(setting, allow_paths=path, solc_version=version)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/longfeichen/.env/compile_solidity/lib/python3.12/site-packages/solcx/main.py", line 369, in compile_standard
+    raise SolcError(
+solcx.exceptions.SolcError: 02_02_AggregatorV3Interface.sol:2:1: ParserError: Source file requires different compiler version (current compiler is 0.7.6+commit.7338295f.Darwin.appleclang) - note that nightly builds are considered to be strictly less than the released version
+pragma solidity ^0.8.0;
+^---------------------^
+
+> command: `/Users/longfeichen/.solcx/solc-v0.7.6 --standard-json --allow-paths /Users/longfeichen/研究生/Web3MLM/testing/sol_batch_compile-main/contracts/0x2500072af7C9b20EF49abA5E255ED63696b2891d_LendLocal`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"5333","formattedMessage":"02_02_AggregatorV3Interface.sol:2:1: ParserError: Source file requires different compiler version (current compiler is 0.7.6+commit.7338295f.Darwin.appleclang) - note that nightly builds are considered to be strictly less than the released version\npragma solidity ^0.8.0;\n^---------------------^\n","message":"Source file requires different compiler version (current compiler is 0.7.6+commit.7338295f.Darwin.appleclang) - note that nightly builds are considered to be strictly less than the released version","severity":"error","sourceLocation":{"end":55,"file":"02_02_AggregatorV3Interface.sol","start":32},"type":"ParserError"}],"sources":{}}
+
+> stderr:
