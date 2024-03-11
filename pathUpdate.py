@@ -2,6 +2,8 @@ import os
 import re
 import json
 
+SavePath = "/Users/xxx/testing/sol_batch_compile-main"
+
 def compare_versions(version):
     """比较版本号，用于排序"""
     version_parts = [int(part) for part in re.findall(r'\d+', version)]
@@ -61,13 +63,17 @@ def update_content(content, file_list):
     """在文件内容中更新引用路径"""
     for filename in file_list:
         if filename.endswith('.sol'):
-            pattern = rf'([\'"])((?:(?!\1).)*{re.escape("/"+"_".join(filename.split("_")[2:]))}\1)'
+            # pattern = rf'([\'"])((?:(?!\1).)*{re.escape("/"+"_".join(filename.split("_")[2:]))}\1)'
+            # pattern = rf'([\'"])((?:(?!\1).)*([\'"/]){re.escape("_".join(filename.split("_")[2:]))}\1)'
             replacement = f'"{r"./"+filename}"'
+            pattern = rf'([\'"])({re.escape("_".join(filename.split("_")[2:]))}\1)'
+            content = re.sub(pattern, replacement, content)
+            pattern = rf'([\'"])((?:(?!\1).)*{"/" + re.escape("_".join(filename.split("_")[2:]))}\1)'
             content = re.sub(pattern, replacement, content)
     return content
 
 def main():
-    base_path = 'D:/sol_batch_complie/contracts'
+    base_path = f'{SavePath}/contracts'
     try:
         find_solidity_files(base_path)
         update_file_references(base_path)

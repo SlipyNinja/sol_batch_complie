@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/Users/longfeichen/研究生/Web3MLM/testing/sol_batch_compile-main/batchCompile.py", line 161, in multi_process_directory
+    compiled_sol = compile_contract(path, version, filename, copy.deepcopy(settings))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/longfeichen/研究生/Web3MLM/testing/sol_batch_compile-main/batchCompile.py", line 115, in compile_contract
+    compiled_sol = compile_standard(setting, allow_paths=path, solc_version=version)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/longfeichen/.env/compile_solidity/lib/python3.12/site-packages/solcx/main.py", line 369, in compile_standard
+    raise SolcError(
+solcx.exceptions.SolcError: ParserError: Source "Library.sol" not found: File not found. Searched the following locations: "".
+ --> 01_02_Fibonacci.sol:3:1:
+  |
+3 | import "./Library.sol";
+  | ^^^^^^^^^^^^^^^^^^^^^^^
+
+
+> command: `/Users/longfeichen/.solcx/solc-v0.8.24 --standard-json --allow-paths /Users/longfeichen/研究生/Web3MLM/testing/sol_batch_compile-main/contracts/0x436e29d38f81afafa08903c5dc268b6be5722e1b_Fibonacci`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"6275","formattedMessage":"ParserError: Source \"Library.sol\" not found: File not found. Searched the following locations: \"\".\n --> 01_02_Fibonacci.sol:3:1:\n  |\n3 | import \"./Library.sol\";\n  | ^^^^^^^^^^^^^^^^^^^^^^^\n\n","message":"Source \"Library.sol\" not found: File not found. Searched the following locations: \"\".","severity":"error","sourceLocation":{"end":63,"file":"01_02_Fibonacci.sol","start":40},"type":"ParserError"}],"sources":{}}
+
+> stderr:

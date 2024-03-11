@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/Users/longfeichen/研究生/Web3MLM/testing/sol_batch_compile-main/batchCompile.py", line 161, in multi_process_directory
+    compiled_sol = compile_contract(path, version, filename, copy.deepcopy(settings))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/longfeichen/研究生/Web3MLM/testing/sol_batch_compile-main/batchCompile.py", line 115, in compile_contract
+    compiled_sol = compile_standard(setting, allow_paths=path, solc_version=version)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/longfeichen/.env/compile_solidity/lib/python3.12/site-packages/solcx/main.py", line 369, in compile_standard
+    raise SolcError(
+solcx.exceptions.SolcError: DeclarationError: Identifier not found or not unique.
+  --> 04_52_IERC2981Upgradeable.sol:16:34:
+   |
+16 | interface IERC2981Upgradeable is IERC165Upgradeable {
+   |                                  ^^^^^^^^^^^^^^^^^^
+
+
+> command: `/Users/longfeichen/.solcx/solc-v0.8.24 --standard-json --allow-paths /Users/longfeichen/研究生/Web3MLM/testing/sol_batch_compile-main/contracts/0xf554c85ae5ad1d35f1939d222ea29ee119751417_SignatureDrop`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"7920","formattedMessage":"DeclarationError: Identifier not found or not unique.\n  --> 04_52_IERC2981Upgradeable.sol:16:34:\n   |\n16 | interface IERC2981Upgradeable is IERC165Upgradeable {\n   |                                  ^^^^^^^^^^^^^^^^^^\n\n","message":"Identifier not found or not unique.","severity":"error","sourceLocation":{"end":515,"file":"04_52_IERC2981Upgradeable.sol","start":497},"type":"DeclarationError"}],"sources":{}}
+
+> stderr:

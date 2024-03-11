@@ -1,0 +1,32 @@
+Traceback (most recent call last):
+  File "/Users/longfeichen/研究生/Web3MLM/testing/sol_batch_compile-main/batchCompile.py", line 161, in multi_process_directory
+    compiled_sol = compile_contract(path, version, filename, copy.deepcopy(settings))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/longfeichen/研究生/Web3MLM/testing/sol_batch_compile-main/batchCompile.py", line 115, in compile_contract
+    compiled_sol = compile_standard(setting, allow_paths=path, solc_version=version)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/longfeichen/.env/compile_solidity/lib/python3.12/site-packages/solcx/main.py", line 369, in compile_standard
+    raise SolcError(
+solcx.exceptions.SolcError: TypeError: Function needs to specify overridden contracts "ERC721A" and "IERC721Metadata".
+  --> 01_16_ASTRO.sol:79:59:
+   |
+79 |   function tokenURI(uint256 _tokenId) public view virtual override returns (string memory) {
+   |                                                           ^^^^^^^^
+Note: This contract: 
+  --> 07_16_ERC721A.sol:24:1:
+   |
+24 | contract ERC721A is Context, ERC165, IERC721A {
+   | ^ (Relevant source part starts here and spans across multiple lines).
+Note: This contract: 
+  --> 10_16_IERC721Metadata.sol:12:1:
+   |
+12 | interface IERC721Metadata is IERC721 {
+   | ^ (Relevant source part starts here and spans across multiple lines).
+
+
+> command: `/Users/longfeichen/.solcx/solc-v0.8.24 --standard-json --allow-paths /Users/longfeichen/研究生/Web3MLM/testing/sol_batch_compile-main/contracts/0xE1d80B1396176774E5E8c22129C25D5aB6bc1153_ASTRO`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"4327","formattedMessage":"TypeError: Function needs to specify overridden contracts \"ERC721A\" and \"IERC721Metadata\".\n  --> 01_16_ASTRO.sol:79:59:\n   |\n79 |   function tokenURI(uint256 _tokenId) public view virtual override returns (string memory) {\n   |                                                           ^^^^^^^^\nNote: This contract: \n  --> 07_16_ERC721A.sol:24:1:\n   |\n24 | contract ERC721A is Context, ERC165, IERC721A {\n   | ^ (Relevant source part starts here and spans across multiple lines).\nNote: This contract: \n  --> 10_16_IERC721Metadata.sol:12:1:\n   |\n12 | interface IERC721Metadata is IERC721 {\n   | ^ (Relevant source part starts here and spans across multiple lines).\n\n","message":"Function needs to specify overridden contracts \"ERC721A\" and \"IERC721Metadata\".","secondarySourceLocations":[{"end":21221,"file":"07_16_ERC721A.sol","message":"This contract: ","start":789},{"end":765,"file":"10_16_IERC721Metadata.sol","message":"This contract: ","start":302}],"severity":"error","sourceLocation":{"end":2540,"file":"01_16_ASTRO.sol","start":2532},"type":"TypeError"}],"sources":{}}
+
+> stderr:

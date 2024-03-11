@@ -1,0 +1,22 @@
+Traceback (most recent call last):
+  File "/Users/longfeichen/研究生/Web3MLM/testing/sol_batch_compile-main/batchCompile.py", line 161, in multi_process_directory
+    compiled_sol = compile_contract(path, version, filename, copy.deepcopy(settings))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/longfeichen/研究生/Web3MLM/testing/sol_batch_compile-main/batchCompile.py", line 115, in compile_contract
+    compiled_sol = compile_standard(setting, allow_paths=path, solc_version=version)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/longfeichen/.env/compile_solidity/lib/python3.12/site-packages/solcx/main.py", line 369, in compile_standard
+    raise SolcError(
+solcx.exceptions.SolcError: TypeError: Definition of base has to precede definition of derived contract
+ --> 5_15_AccessControlEnumerable.sol:7:37:
+  |
+7 | contract AccessControlEnumerable is ACE {
+  |                                     ^^^
+
+
+> command: `/Users/longfeichen/.solcx/solc-v0.8.17 --standard-json --allow-paths /Users/longfeichen/研究生/Web3MLM/testing/sol_batch_compile-main/contracts/0x92ebff8c574d02915bd99d52f44a3ae17e060d10`
+> return code: `0`
+> stdout:
+{"errors":[{"component":"general","errorCode":"2449","formattedMessage":"TypeError: Definition of base has to precede definition of derived contract\n --> 5_15_AccessControlEnumerable.sol:7:37:\n  |\n7 | contract AccessControlEnumerable is ACE {\n  |                                     ^^^\n\n","message":"Definition of base has to precede definition of derived contract","severity":"error","sourceLocation":{"end":264,"file":"5_15_AccessControlEnumerable.sol","start":261},"type":"TypeError"}],"sources":{"10_15_Strings.sol":{"id":0},"12_15_IERC165.sol":{"id":1},"13_15_Math.sol":{"id":2},"1_15_PROOFAdminACL.sol":{"id":3},"2_15_Ownable.sol":{"id":4},"3_15_AccessControl.sol":{"id":5},"4_15_Address.sol":{"id":6},"5_15_AccessControlEnumerable.sol":{"id":7},"6_15_ERC165.sol":{"id":8},"7_15_IAdminACLV0.sol":{"id":9},"8_15_Context.sol":{"id":10},"9_15_IAccessControl.sol":{"id":11}}}
+
+> stderr:

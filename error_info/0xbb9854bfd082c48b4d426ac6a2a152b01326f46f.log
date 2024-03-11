@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "/Users/longfeichen/研究生/Web3MLM/testing/sol_batch_compile-main/batchCompile.py", line 156, in multi_process_directory
+    _install_solc(version)
+  File "/Users/longfeichen/.env/compile_solidity/lib/python3.12/site-packages/timeout_decorator/timeout_decorator.py", line 82, in new_function
+    return function(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/longfeichen/研究生/Web3MLM/testing/sol_batch_compile-main/batchCompile.py", line 20, in _install_solc
+    install_solc(version, show_progress=True)
+  File "/Users/longfeichen/.env/compile_solidity/lib/python3.12/site-packages/solcx/install.py", line 459, in install_solc
+    else _convert_and_validate_version(version)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/longfeichen/.env/compile_solidity/lib/python3.12/site-packages/solcx/install.py", line 69, in _convert_and_validate_version
+    version = Version(version.lstrip("v"))
+                      ^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'lstrip'
